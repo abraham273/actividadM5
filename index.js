@@ -6,7 +6,6 @@ function calcula() {
     var tipo = CalculaTipo(venta, retorno);
     var resultat;
 
-  // Punto de registro para la variable 'tipo'
     console.log("Llamada a CalculaTipo con venta:", venta, "y retorno:", retorno);
     console.log("El valor del tipo es:", tipo);
 
@@ -46,11 +45,11 @@ function CalculaTipo(venta, retorno) {
     factor = Math.round(factor / 10) * 10;
 
     if (venta >= 500) {
-        if (factor === 100) {
+        if (factor == 100) {
             resultat = 5;
         } else if (factor > 50) {
             resultat = 4;
-        } else if (factor === 0) {
+        } else if (factor == 0) {
             resultat = 0;
         } else {
             resultat = 1;
@@ -66,5 +65,4 @@ function CalculaTipo(venta, retorno) {
     return resultat;
 }
 
-// Exportar la función para testing
 module.exports = { CalculaTipo };
